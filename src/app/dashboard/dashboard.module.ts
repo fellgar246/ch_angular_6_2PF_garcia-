@@ -11,13 +11,15 @@ import { CoursesModule } from './pages/courses/courses.module';
 import { HomeComponent } from './pages/home/home.component';
 import { NavMenuComponent } from './layout/nav-menu/nav-menu.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { ProductsModule } from './pages/products/products.module';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    HomeComponent,
     NavMenuComponent,
-    ToolbarComponent
+    ToolbarComponent,
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,9 @@ import { ToolbarComponent } from './layout/toolbar/toolbar.component';
     MatListModule,
     SharedModule,
     UsersModule,
-    CoursesModule
+    CoursesModule,
+    ProductsModule,
+    DashboardRoutingModule
   ],
   exports: [
     DashboardComponent

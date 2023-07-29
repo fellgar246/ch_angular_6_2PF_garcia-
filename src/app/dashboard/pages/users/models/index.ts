@@ -5,6 +5,7 @@ export interface User {
   age: Number;
   email: String;
   course: String;
+  password: String;
 }
 
 export interface CreateUserData {
@@ -13,6 +14,7 @@ export interface CreateUserData {
   age: Number;
   email: String;
   course: String;
+  password: String;
 }
 
 export interface UpdateUserData {

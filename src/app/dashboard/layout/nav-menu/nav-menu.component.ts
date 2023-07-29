@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavMenuComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   logout(): void {
     this.router.navigate(['auth','login'], {});

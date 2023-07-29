@@ -3,4 +3,8 @@
     <mat-icon>menu</mat-icon>
   </button>
   <div class="logo"></div>
+
+  <p *ngIf="authUser$ | async; let authUser ">
+    {{ authUser?.name }} {{ authUser?.lastName }}
+  </p>
 </mat-toolbar>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CreateUserData, UpdateUserData, User } from './models';
-import { BehaviorSubject, Observable, Subject, delay, of, take } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, delay, of, take, map } from 'rxjs';
 
 const USER_DB: Observable<User[]> = of([
   {
@@ -10,6 +10,7 @@ const USER_DB: Observable<User[]> = of([
     email: 'juan@mail.com',
     age: 25,
     course: 'Angular',
+    password: '1234'
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const USER_DB: Observable<User[]> = of([
     email: 'maria@email.com',
     age: 30,
     course: 'React',
+    password: '1234'
   },
 ]).pipe(delay(1000));
 
@@ -39,6 +41,13 @@ export class UserService {
 
   getUsers(): Subject<User[]> {
     return this._users$
+  }
+
+  getUserById(id: Number): Observable<User | undefined> {
+    return this.users$.pipe(
+      map((users) => users.find((user) => user.id === id)),
+      take(1)
+    )
   }
 
   createUser(user: CreateUserData): void {

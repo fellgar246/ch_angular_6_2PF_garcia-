@@ -5,6 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { CourseFormDialogComponent } from './components/course-form-dialog/course-form-dialog.component';
 import { CoursesTableComponent } from './components/courses-table/courses-table.component';
+import { CoursesRoutingModule } from './courses-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CoursesTableComponent } from './components/courses-table/courses-table.
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    CoursesRoutingModule
   ],
   exports: [
     CoursesComponent

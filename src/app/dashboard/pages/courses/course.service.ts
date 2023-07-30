@@ -23,7 +23,7 @@ const COURSE_DB: Observable<Course[]> = of([
     nameCourse: "SQL",
     typeCourse: "Bases de Datos",
   },
-]).pipe(delay(1000));
+]).pipe(delay(500));
 
 @Injectable({
   providedIn: 'root'

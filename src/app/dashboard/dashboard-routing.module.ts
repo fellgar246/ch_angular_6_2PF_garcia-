@@ -1,10 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { HomeComponent } from "./pages/home/home.component";
-import { UsersComponent } from "./pages/users/users.component";
-import { UserDetailComponent } from "./pages/users/pages/user-detail/user-detail.component";
 import { CoursesComponent } from "./pages/courses/courses.component";
-import { ProductsComponent } from "./pages/products/products.component";
+import { CategoriesComponent } from "./pages/categories/categories.component";
 
 
 
@@ -24,9 +22,8 @@ import { ProductsComponent } from "./pages/products/products.component";
         component: CoursesComponent
       },
       {
-        //! Cambiar por categories
-        path: 'products',
-        component: ProductsComponent
+        path: 'categories',
+        component: CategoriesComponent
       },
       {
         path: '**',

@@ -20,9 +20,7 @@ export class CoursesComponent {
     private notifier: NotifierService,
     ) {
       this.courseService.loadCourses();
-      this.courses = this.courseService.getCourses().pipe(
-        map((courses) => courses.filter((course) => course.typeCourse === 'Frontend'))
-      );
+      this.courses = this.courseService.getCourses()
     }
 
   onCreateCourse(): void {

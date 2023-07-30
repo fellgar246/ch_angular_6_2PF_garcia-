@@ -21,7 +21,7 @@ const USER_DB: Observable<User[]> = of([
     course: 'React',
     password: '1234'
   },
-]).pipe(delay(1000));
+]).pipe(delay(500));
 
 @Injectable({
   providedIn: 'root'
@@ -61,12 +61,12 @@ export class UserService {
     })
   }
 
-  updateUserById(id: Number, userioActualizado: UpdateUserData): void {
+  updateUserById(id: Number, usuarioActualizado: UpdateUserData): void {
     this.users$.pipe(take(1)).subscribe({
       next: (arrayActual) => {
         this._users$.next(
           arrayActual.map((user) =>
-            user.id === id ? { ...user, ...userioActualizado } : user
+            user.id === id ? { ...user, ...usuarioActualizado } : user
           )
         )
       }

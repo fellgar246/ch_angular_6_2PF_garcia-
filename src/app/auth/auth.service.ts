@@ -26,12 +26,11 @@ export class AuthService {
       name: 'Mockname',
       age: 50,
       course: 'Mockcourse',
-      lastName: 'Mocksurname',
+      lastName: 'Mocklastname',
       email: 'fakeemail@fake.com',
       password: '123456',
     }
     if (payload.email === MOCK_USER.email && payload.password === MOCK_USER.password) {
-      // LOGIN ES VALIDO
       this._authUser$.next(MOCK_USER);
       this.router.navigate(['/dashboard']);
     } else {

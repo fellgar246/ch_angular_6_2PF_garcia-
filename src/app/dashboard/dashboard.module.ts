@@ -8,12 +8,10 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard.component';
 import { UsersModule } from './pages/users/users.module';
 import { CoursesModule } from './pages/courses/courses.module';
-import { HomeComponent } from './pages/home/home.component';
 import { NavMenuComponent } from './layout/nav-menu/nav-menu.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
-import { ProductsComponent } from './pages/products/products.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { ProductsModule } from './pages/products/products.module';
+import { CategoriesModule } from './pages/categories/categories.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +28,7 @@ import { ProductsModule } from './pages/products/products.module';
     SharedModule,
     UsersModule,
     CoursesModule,
-    ProductsModule,
+    CategoriesModule,
     DashboardRoutingModule
   ],
   exports: [
